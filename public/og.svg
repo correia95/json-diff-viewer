@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#071620"/>
+  <g transform="translate(830,160)" font-family="SFMono-Regular, Consolas, monospace" font-size="26">
+    <rect x="-20" y="-30" width="280" height="220" rx="10" fill="#3a1414"/>
+    <rect x="270" y="-30" width="280" height="220" rx="10" fill="#0f2f1e"/>
+    <text x="0" y="0" fill="#f87171">"version":</text>
+    <text x="0" y="35" fill="#f87171">"1.0.0",</text>
+    <text x="290" y="0" fill="#4ade80">"version":</text>
+    <text x="290" y="35" fill="#4ade80">"1.1.0",</text>
+  </g>
+  <text x="90" y="150" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="72" font-weight="800" fill="#e6eef4" letter-spacing="-1">JSON Diff</text>
+  <text x="90" y="215" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="72" font-weight="800" fill="#e6eef4" letter-spacing="-1">Viewer</text>
+  <text x="90" y="440" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="24" fill="#e6eef4">Compares by value, not by line</text>
+  <text x="90" y="488" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="22" fill="#90a7b6">Free · no sign-up · runs in your browser</text>
+</svg>

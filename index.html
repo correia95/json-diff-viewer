@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0c4a6e" />
+
+    <title>JSON Diff Viewer — compare two JSON documents by value</title>
+    <meta
+      name="description"
+      content="Compare two JSON documents structurally, not line-by-line — reordered keys and reformatted whitespace never show up as false differences. Free, runs entirely in your browser, nothing is uploaded."
+    />
+    <link rel="canonical" href="https://json-diff-viewer.correia95.workers.dev/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="JSON Diff Viewer" />
+    <meta property="og:description" content="Compare two JSON documents by structure and value, not by line. Free, in your browser." />
+    <meta property="og:url" content="https://json-diff-viewer.correia95.workers.dev/" />
+    <meta property="og:image" content="https://json-diff-viewer.correia95.workers.dev/og.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="JSON Diff Viewer" />
+    <meta name="twitter:description" content="Compare two JSON documents by structure and value, not by line. Free, in your browser." />
+    <meta name="twitter:image" content="https://json-diff-viewer.correia95.workers.dev/og.svg" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "JSON Diff Viewer",
+        "url": "https://json-diff-viewer.correia95.workers.dev/",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Compares two JSON documents by structure and value rather than by line, reporting added, removed and changed values with their paths, entirely in the browser."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does JSON key order matter for the diff?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, two objects with the same keys and values are treated as identical regardless of order."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How are array differences shown?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "By index. Inserting an element in the middle of an array will show as changes to every following index plus one addition at the end, since this compares by position rather than detecting a reordering."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if a value changes type entirely?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A value changing from an object to an array, or a number to a string, is shown as a single changed entry with the old and new value in full."
+            }
+          }
+        ]
+      }
+    </script>
+    <style>
+      .tt-nav { box-sizing: border-box; width: 100%; margin: 0; background: #f1f1f4; border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      .tt-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; text-decoration: none; color: #3730a3; font: 600 13px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .tt-nav a:hover { color: #1e1b4b; text-decoration: underline; }
+      .tt-nav svg { width: 14px; height: 14px; flex: none; }
+      @media (prefers-color-scheme: dark) {
+        .tt-nav { background: #15151b; border-bottom-color: rgba(255, 255, 255, 0.12); }
+        .tt-nav a { color: #c7d2fe; }
+        .tt-nav a:hover { color: #e0e7ff; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="tt-nav"><a href="https://tinytools.correia95.workers.dev/" aria-label="TinyTools home — all tools and games"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 2 11h3v9h5v-6h4v6h5v-9h3z"/></svg><span>TinyTools</span></a></nav>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <noscript>
+      <p style="text-align: center; padding: 20px">
+        This JSON diff viewer needs JavaScript to run in your browser.
+      </p>
+    </noscript>
+  </body>
+</html>
