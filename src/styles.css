@@ -92,3 +92,8 @@ h1 { font-size: clamp(1.4rem, 4.2vw, 1.9rem); margin: 0 0 6px; letter-spacing: -
 @media (max-width: 620px) {
   .editors { flex-direction: column; }
 }
+
+/* a11y-contrast-fixes (auto, WCAG AA 4.5:1) */
+@media (prefers-color-scheme: light) {
+  .badge.changed { color: #9b5e07; }
+}
